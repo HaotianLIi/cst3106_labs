@@ -1,0 +1,104 @@
+/* ===== Whole page ===== */
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  line-height: 1.5;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* ===== Header ===== */
+header {
+  text-align: center;
+  border-bottom: 3px solid navy;
+}
+
+h1 {
+  color: navy;
+  margin-bottom: 5px;
+}
+
+.contact {
+  margin: 4px 0;
+}
+
+/* ===== Headings ===== */
+h2 {
+  color: navy;
+  border-bottom: 1px solid #ccc;
+}
+
+h3 {
+  margin: 0;
+}
+
+/* ===== Links ===== */
+a {
+  color: navy;
+}
+
+a:hover {
+  color: orange;
+}
+
+/* ===== Skills table ===== */
+th {
+  text-align: left;
+  padding-right: 20px;
+}
+
+/* ===== Job and project entries ===== */
+.entry {
+  margin-bottom: 20px;
+}
+
+/* Title on the left, date on the right */
+.entry-top,
+.entry-sub {
+  display: flex;
+  justify-content: space-between;
+}
+
+.date {
+  color: gray;
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  color: gray;
+  font-size: 12px;
+  margin-top: 30px;
+}
+
+/* ===== Small screens (phones) ===== */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+
+  .contact {
+    font-size: 13px;
+  }
+
+  /* Stack the title and date on top of each other */
+  .entry-top,
+  .entry-sub {
+    flex-direction: column;
+  }
+
+  /* Put each skill category above its list */
+  th,
+  td {
+    display: block;
+  }
+
+  td {
+    margin-bottom: 8px;
+  }
+}
