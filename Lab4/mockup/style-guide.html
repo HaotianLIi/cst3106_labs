@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Style Guide — Franky</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Style-guide-only helpers */
+    .sg { padding: var(--s-12) 0; }
+    .sg-block { margin-bottom: var(--s-12); }
+    .sg-block > h2 { font-size: var(--t-60); margin-bottom: var(--s-4); }
+    .swatches { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: var(--s-3); }
+    .swatch div { height: 110px; margin-bottom: 10px; box-shadow: inset 0 0 0 1px rgba(0,0,0,.08); }
+    .swatch b { display: block; font-size: var(--t-14); }
+    .swatch span { color: var(--slate); font-size: var(--t-14); }
+    .type-row { display: grid; grid-template-columns: 240px 1fr; gap: var(--s-4); align-items: baseline; border-top: 1px solid var(--line); padding: var(--s-3) 0; }
+    .type-row > span:first-child { color: var(--slate); font-size: var(--t-14); }
+    .demo-dark { background: var(--midnight); color: var(--white); padding: var(--s-6); display: flex; flex-wrap: wrap; gap: var(--s-4); align-items: center; }
+    .geo { display: flex; gap: var(--s-8); flex-wrap: wrap; align-items: flex-end; }
+    .geo figure { margin: 0; }
+    .geo figcaption { font-size: var(--t-14); color: var(--slate); margin-top: var(--s-2); }
+    .slant-demo { width: 280px; height: 180px; background: var(--cobalt); clip-path: polygon(0 18%, 100% 0, 100% 82%, 0 100%); }
+  </style>
+</head>
+<body>
+  <header class="site-header solid">
+    <div class="container"><span class="wordmark">Franky</span><span class="caps" style="color: var(--haze)">Design system v3</span></div>
+  </header>
+  <main class="sg">
+    <div class="container">
+
+      <div class="sg-block">
+        <h2>Colour</h2>
+        <div class="swatches">
+          <div class="swatch"><div style="background:#0E1325"></div><b>Midnight</b><span>#0E1325</span></div>
+          <div class="swatch"><div style="background:#1A2140"></div><b>Midnight 2</b><span>#1A2140</span></div>
+          <div class="swatch"><div style="background:#3346F5"></div><b>Cobalt</b><span>#3346F5</span></div>
+          <div class="swatch"><div style="background:#7FDCE6"></div><b>Cyan</b><span>#7FDCE6</span></div>
+          <div class="swatch"><div style="background:#A9B0C7"></div><b>Haze</b><span>#A9B0C7</span></div>
+          <div class="swatch"><div style="background:#5B6275"></div><b>Slate</b><span>#5B6275</span></div>
+          <div class="swatch"><div style="background:#D9DCE4"></div><b>Line</b><span>#D9DCE4</span></div>
+          <div class="swatch"><div style="background:#F4F5F7"></div><b>Paper</b><span>#F4F5F7</span></div>
+          <div class="swatch"><div style="background:#FFFFFF"></div><b>White</b><span>#FFFFFF</span></div>
+        </div>
+      </div>
+
+      <div class="sg-block">
+        <h2>Type</h2>
+        <div class="type-row"><span>Hero, Big Shoulders Display 900, up to 208px</span><span class="hero-name" data-text="Franky" style="font-family:var(--font-display);font-size:8rem;color:var(--midnight)">Franky</span></div>
+        <div class="type-row"><span>H2, Big Shoulders Display 800, 96px, caps</span><h2>Builder by trade</h2></div>
+        <div class="type-row"><span>H3, Big Shoulders Display 800, 36px, caps</span><h3>Weather Station API</h3></div>
+        <div class="type-row"><span>Lead, Manrope 500, 24px</span><span style="font-size:var(--t-24);font-weight:500">I build the parts of an app you never see.</span></div>
+        <div class="type-row"><span>Body, Manrope 400, 16px</span><span style="color:var(--slate)">Body copy runs at 16px with a 1.65 line height and lines under 60 characters.</span></div>
+        <div class="type-row"><span>Nav and labels, Manrope 700, 12px, tracked caps</span><span class="caps">Freelance / 2026</span></div>
+        <div class="type-row"><span>Note, Caveat 600, 28px (two per page, max)</span><p class="note" style="color:var(--midnight)">where the name comes from</p></div>
+      </div>
+
+      <div class="sg-block">
+        <h2>Geometry</h2>
+        <div class="geo">
+          <figure style="width:240px">
+            <figure class="photo-me" style="margin:0"><img src="images/haotian.jpg" alt=""><p class="note note-me"><svg viewBox="0 0 80 40" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M4 6 C 30 4, 60 14, 72 32"/><path d="M60 30 L72 33 L74 21"/></svg>that's me</p></figure>
+            <figcaption style="margin-top: var(--s-8)">Tilted photo frame with offset cobalt block and handwritten note</figcaption>
+          </figure>
+          <figure>
+            <div class="slant-demo"></div>
+            <figcaption>Section slant, 7vw on both edges</figcaption>
+          </figure>
+          <figure style="width:380px">
+            <div class="project-media">
+              <img src="images/project-weather.jpg" alt="">
+              <div class="project-title"><span class="caps">Overlap box</span><h3>Project title</h3></div>
+            </div>
+            <figcaption style="margin-top: var(--s-8)">Dark title box overlapping the project image</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="sg-block">
+        <h2>Controls</h2>
+        <div class="demo-dark">
+          <a class="btn btn-cobalt" href="#">See my work</a>
+          <a class="btn btn-line" href="#">Get in touch</a>
+          <ul class="nav-list caps"><li><a href="#" aria-current="page">Active link</a></li><li><a href="#">Nav link</a></li><li><a href="#" class="nav-cta">Contact</a></li></ul>
+        </div>
+        <ul class="stack"><li>Laravel</li><li>PostgreSQL</li><li>GitHub Actions</li></ul>
+      </div>
+
+    </div>
+  </main>
+</body>
+</html>

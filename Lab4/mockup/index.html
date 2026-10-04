@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Franky — Haotian Li</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="wordmark">Franky</a>
+      <nav aria-label="Main">
+        <ul class="nav-list caps">
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="projects.html">Work</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#contact" class="nav-cta">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-plane" aria-hidden="true"></div>
+      <figure class="hero-franky">
+        <img src="images/franky-super.jpg" alt="Franky from One Piece striking his SUPER pose, arms locked together above his head">
+        <figcaption class="credit">Franky from One Piece. &copy; Eiichiro Oda / Shueisha, Toei Animation</figcaption>
+      </figure>
+      <p class="note note-franky">where the name comes from<svg viewBox="0 0 80 40" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M4 6 C 30 4, 60 14, 72 32"/><path d="M60 30 L72 33 L74 21"/></svg></p>
+      <p class="hero-vertical caps">Ottawa, Canada / 2026</p>
+
+      <div class="container hero-inner">
+        <p class="hero-hello">Hi, I'm Haotian Li. Most people call me</p>
+        <h1 class="hero-name" data-text="Franky">Franky</h1>
+        <p class="hero-role"><span>Back-end developer</span><span>Print designer</span><span>BTech student, Algonquin College</span></p>
+        <div class="hero-actions">
+          <a href="projects.html" class="btn btn-cobalt">Projects</a>
+          <a href="mailto:frankyhaotian@gmail.com" class="btn btn-line">Email me</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="container">
+        <figure class="photo-me">
+          <img src="images/haotian.jpg" alt="Haotian standing under a tree in full blossom">
+          <p class="note note-me"><svg viewBox="0 0 80 40" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M4 6 C 30 4, 60 14, 72 32"/><path d="M60 30 L72 33 L74 21"/></svg>that's me</p>
+        </figure>
+
+        <div class="about-text">
+          <h2>About me</h2>
+          <p>I'm a second-year Business Systems Development student at Algonquin College. Most of my coding is back-end work: Laravel APIs, PostgreSQL, and GitHub Actions to deploy to a Linux server. I also work part-time at a print shop in Nepean, where I make signs and apparel graphics in Photoshop and Illustrator.</p>
+          <p>When I'm not coding, I'm usually playing the One Piece Card Game. My favourite character is Franky, the crew's shipwright, the one up top doing his "SUPER" pose. We share a name, and he builds things too.</p>
+
+          <div class="skills">
+            <div>
+              <h3>Code</h3>
+              <ul><li>Python, PHP, Java</li><li>JavaScript, HTML/CSS</li><li>SQL</li></ul>
+            </div>
+            <div>
+              <h3>Stack</h3>
+              <ul><li>Laravel, Next.js, JavaFX</li><li>PostgreSQL, MySQL</li><li>Supabase, Vercel</li></ul>
+            </div>
+            <div>
+              <h3>Ops &amp; design</h3>
+              <ul><li>Git, GitHub Actions</li><li>Linux, SSH, Bash</li><li>Photoshop, Illustrator</li></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="work" id="work">
+      <div class="container">
+        <div class="work-head">
+          <h2>Projects</h2>
+          <p><a href="projects.html">All projects</a></p>
+        </div>
+
+        <article class="project">
+          <figure class="project-media">
+            <img src="images/project-weather.jpg" alt="Mock-up of the Weather Station API code, JSON response and deploy output"><span class="mock-tag">Mock-up</span>
+            <div class="project-title"><span class="caps">Freelance / 2026</span><h3>Weather Station API</h3></div>
+          </figure>
+          <div class="project-body">
+            <p>A Laravel REST API that serves weather data to the station's front end, backed by a PostgreSQL schema I designed.</p>
+            <p>Pushing to main runs the tests and deploys to the Linux server over SSH. It was a solo contract, so I did the requirements, build and deployment myself.</p>
+            <ul class="stack"><li>Laravel</li><li>PostgreSQL</li><li>GitHub Actions</li><li>Linux</li></ul>
+          </div>
+        </article>
+
+        <article class="project flip">
+          <figure class="project-media">
+            <img src="images/project-chocolate.jpg" alt="Mock-up of the planned Chocolate Shipping admin and shop screens"><span class="mock-tag">Mock-up</span>
+            <div class="project-title"><span class="caps">Personal / In progress</span><h3>Chocolate Shipping</h3></div>
+          </figure>
+          <div class="project-body">
+            <p>An ordering app for a chocolate shipping business. Customers order and pay online, and the owner exports orders to hand off to the carrier.</p>
+            <p class="status">Still in the planning stage. The image shows the screens I&rsquo;m aiming for.</p>
+            <ul class="stack"><li>Next.js</li><li>Supabase</li><li>Stripe</li></ul>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="experience" id="experience">
+      <div class="container">
+        <h2>Experience</h2>
+        <div class="jobs">
+          <article class="job">
+            <p class="when caps">March 2026 to now</p>
+            <h3>Operations &amp; Design Associate</h3>
+            <p class="where">Newer Express, Nepean</p>
+            <ul>
+              <li>Design signage, real-estate plates and apparel graphics in Photoshop and Illustrator.</li>
+              <li>Run large-format and specialty printers; process passport and ID photos to government specs.</li>
+              <li>Prepare documentation for international courier shipments.</li>
+            </ul>
+          </article>
+          <article class="job">
+            <p class="when caps">January to March 2026</p>
+            <h3>Freelance Back-End Developer</h3>
+            <p class="where">Weather Station Application, Ottawa</p>
+            <ul>
+              <li>Built the Laravel REST API and PostgreSQL database behind the app.</li>
+              <li>Set up GitHub CI/CD deploying to a Linux server over SSH.</li>
+              <li>Owned the full cycle, from requirements to maintenance.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container">
+        <h2>Contact</h2>
+        <p class="contact-line">Email is the best way to reach me.</p>
+        <a class="contact-email" href="mailto:frankyhaotian@gmail.com">frankyhaotian@gmail.com</a>
+        <ul class="socials caps">
+          <li><a href="https://github.com/HaotianLIi">GitHub</a></li>
+          <li><a href="https://linkedin.com/in/haotian-li">LinkedIn</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <a href="index.html" class="wordmark">Franky</a>
+      <p>&copy; 2026 Haotian Li</p>
+    </div>
+  </footer>
+
+</body>
+</html>
