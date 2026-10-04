@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Work — Franky</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="site-header solid">
+    <div class="container">
+      <a href="index.html" class="wordmark">Franky</a>
+      <nav aria-label="Main">
+        <ul class="nav-list caps">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="projects.html" aria-current="page">Work</a></li>
+          <li><a href="index.html#experience">Experience</a></li>
+          <li><a href="index.html#contact" class="nav-cta">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="hero-plane" aria-hidden="true"></div>
+      <div class="container">
+        <h1>Work</h1>
+        <p>School, freelance and personal projects, newest first.</p>
+      </div>
+    </section>
+
+    <section class="work">
+      <div class="container">
+        <article class="project">
+          <figure class="project-media">
+            <img src="images/project-chocolate.jpg" alt="Mock-up of the planned Chocolate Shipping admin and shop screens"><span class="mock-tag">Mock-up</span>
+            <div class="project-title"><span class="caps">Personal / In progress</span><h3>Chocolate Shipping</h3></div>
+          </figure>
+          <div class="project-body">
+            <p>An ordering app for a chocolate shipping business. Customers order and pay online, and the owner exports orders to hand off to the carrier.</p>
+            <p class="status">Still in the planning stage. The image shows the screens I&rsquo;m aiming for.</p>
+            <ul class="stack"><li>Next.js</li><li>Supabase</li><li>Stripe</li></ul>
+          </div>
+        </article>
+
+        <article class="project flip">
+          <figure class="project-media">
+            <img src="images/project-weather.jpg" alt="Mock-up of the Weather Station API code, JSON response and deploy output"><span class="mock-tag">Mock-up</span>
+            <div class="project-title"><span class="caps">Freelance / 2026</span><h3>Weather Station API</h3></div>
+          </figure>
+          <div class="project-body">
+            <p>A Laravel REST API that serves weather data to the station's front end, backed by a PostgreSQL schema I designed.</p>
+            <p>Pushing to main runs the tests and deploys to the Linux server over SSH.</p>
+            <ul class="stack"><li>Laravel</li><li>PostgreSQL</li><li>GitHub Actions</li><li>Linux</li></ul>
+          </div>
+        </article>
+
+        <article class="project">
+          <figure class="project-media">
+            <img src="images/project-sync.jpg" alt="Mock-up of the Syncthing dashboard and Tailscale status"><span class="mock-tag">Mock-up</span>
+            <div class="project-title"><span class="caps">Self-hosted / 2026</span><h3>Home Sync Stack</h3></div>
+          </figure>
+          <div class="project-body">
+            <p>Syncthing keeps my school and project folders in sync between my Linux laptop and my Windows PC. Tailscale connects them, so it works away from home too.</p>
+            <ul class="stack"><li>Syncthing</li><li>Tailscale</li><li>Linux</li></ul>
+          </div>
+        </article>
+
+        <article class="project flip">
+          <figure class="project-media">
+            <img src="images/project-portfolio.jpg" alt="Screenshot of this site in Brave, with the design doc open in Zed">
+            <div class="project-title"><span class="caps">CST3106 / 2026</span><h3>This Portfolio</h3></div>
+          </figure>
+          <div class="project-body">
+            <p>This site, built for CST3106 Lab 04 from a documented design system. Changes go through pull requests on GitHub.</p>
+            <ul class="stack"><li>HTML</li><li>CSS</li><li>Markdown</li></ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container">
+        <h2>Contact</h2>
+        <p class="contact-line">Email is the best way to reach me.</p>
+        <a class="contact-email" href="mailto:frankyhaotian@gmail.com">frankyhaotian@gmail.com</a>
+        <ul class="socials caps">
+          <li><a href="https://github.com/HaotianLIi">GitHub</a></li>
+          <li><a href="https://linkedin.com/in/haotian-li">LinkedIn</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <a href="index.html" class="wordmark">Franky</a>
+      <p>&copy; 2026 Haotian Li</p>
+    </div>
+  </footer>
+
+</body>
+</html>
