@@ -1,0 +1,29 @@
+/* game styles from lecture 5 slides (Styling) */
+
+/* main box that holds everything */
+.game-container {
+  background-color: #f4f4f4;
+  padding: 20px;
+  margin: auto;
+  width: 50%;
+}
+
+/* roll dice button */
+#rollButton {
+  background: linear-gradient(#f4f4f4, #ddd);
+  padding: 10px 20px;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+/* flip the gradient on hover so it looks pressed */
+#rollButton:hover {
+  background: linear-gradient(#ddd, #f4f4f4);
+}
+
+/* score table */
+.scorecard {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
