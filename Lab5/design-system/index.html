@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Design System</title>
+  <link rel="stylesheet" href="../dice-design/dice.css">
+  <link rel="stylesheet" href="../yatzy-mock-up/styles.css">
+</head>
+<body>
+
+  <h1>Yatzy Design System</h1>
+  <p>Colors, fonts and parts of the game. More info in design_system.md.</p>
+
+  <h2>Colors</h2>
+  <table>
+    <tr><th>Color</th><th>Name</th><th>Hex</th><th>Used for</th></tr>
+    <tr><td><div style="width:60px; height:30px; background:#f4f4f4; border:1px solid black;"></div></td><td>Light grey (primary)</td><td>#f4f4f4</td><td>game container, button</td></tr>
+    <tr><td><div style="width:60px; height:30px; background:#dddddd; border:1px solid black;"></div></td><td>Grey (secondary)</td><td>#dddddd</td><td>button gradient</td></tr>
+    <tr><td><div style="width:60px; height:30px; background:#000000; border:1px solid black;"></div></td><td>Black</td><td>#000000</td><td>dice, dots, text</td></tr>
+    <tr><td><div style="width:60px; height:30px; background:#ffffff; border:1px solid black;"></div></td><td>White</td><td>#ffffff</td><td>page background</td></tr>
+  </table>
+
+  <h2>Fonts</h2>
+  <p>Browser default font for everything. The Roll Dice button is 1.2em.</p>
+  <h1>Heading (h1)</h1>
+  <h2>Subheading (h2)</h2>
+  <p>Body text (p)</p>
+
+  <h2>Game parts</h2>
+
+  <!-- uses the same css as the mock-up -->
+  <div class="game-container">
+    <p>Game container</p>
+
+    <div class="dice-group">
+      <div class="dice-container">
+        <div class="dice">
+          <div class="top-left"><div class="dot"></div></div>
+          <div class="middle"><div class="dot"></div></div>
+          <div class="bottom-right"><div class="dot"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <button id="rollButton">Roll Dice</button>
+
+    <table class="scorecard">
+      <tr class="score-section"><td><label>Ones</label></td><td><span>0</span></td></tr>
+    </table>
+  </div>
+
+</body>
+</html>
