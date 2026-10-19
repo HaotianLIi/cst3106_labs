@@ -31,8 +31,21 @@ function showScores() {
 
   for (const category of YatzyEngine.CATEGORIES) {
     const score = engine.scoreTable[category];
-    document.getElementById(category + "Score").textContent = score === null ? "-" : score;
-    document.querySelector(`[data-category="${category}"]`).classList.toggle("used", score !== null);
+    const span = document.getElementById(category + "Score");
+    const row = document.querySelector(`[data-category="${category}"]`);
+    row.classList.toggle("used", score !== null);
+
+    if (score !== null) {
+      span.textContent = score;                 // box already used
+      span.className = "";
+    } else if (game.rollCount > 0 && !game.gameOver) {
+      // preview what this box would score with the current dice
+      span.textContent = engine.calculateScore(category, game.dice.getValues());
+      span.className = "preview";
+    } else {
+      span.textContent = "-";
+      span.className = "";
+    }
   }
 
   document.getElementById("upperSum").textContent = engine.getUpperSum();
@@ -45,8 +58,11 @@ function showMessage() {
     message.textContent = `Game over! ${game.winner.name} scored ${game.winner.score} points.`;
   } else if (game.rollCount === 0) {
     message.textContent = `Round ${game.currentRound} of ${YatzyGame.MAX_ROUNDS} - Roll the dice`;
+  } else if (game.canRoll()) {
+    message.textContent = `Round ${game.currentRound} of ${YatzyGame.MAX_ROUNDS} - Roll ${game.rollCount} of ${YatzyGame.MAX_ROLLS}` +
+      ` - click dice to keep them, or click a box to score`;
   } else {
-    message.textContent = `Round ${game.currentRound} of ${YatzyGame.MAX_ROUNDS} - Roll ${game.rollCount} of ${YatzyGame.MAX_ROLLS}`;
+    message.textContent = `Round ${game.currentRound} of ${YatzyGame.MAX_ROUNDS} - No rolls left, click a box on the scorecard to score`;
   }
   rollButton.disabled = !game.canRoll();
 }

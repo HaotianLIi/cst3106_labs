@@ -50,6 +50,12 @@
 .score-section[data-category] { cursor: pointer; }
 .score-section[data-category]:hover { background-color: #ddd; }
 
+/* score a box would get with the current dice (not saved yet) */
+.preview {
+  color: #888;
+  font-style: italic;
+}
+
 /* boxes that are already used */
 .score-section.used {
   cursor: default;
