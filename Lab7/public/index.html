@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yatzy Dice</title>
+  <link rel="stylesheet" href="dice.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="game-container">
+
+  <h1>Yatzy Dice</h1>
+
+  <p id="message">Roll the Dice</p>
+
+  <!-- the 5 dice are added by app.js with Dice.showDie() -->
+  <div class="dice-group" id="diceGroup"></div>
+
+  <button id="rollButton">Roll Dice</button>
+  <button id="newTurnButton">New Turn</button>
+  <p id="serverResult"></p>
+
+</div>
+
+<!-- modules first, then the page code that uses them -->
+<script src="dice.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
