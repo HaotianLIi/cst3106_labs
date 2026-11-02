@@ -1,7 +1,3 @@
-// dice.js - Dice module for Yatzy (Lab 6)
-// handles rolling the dice and keeping track of their values
-// the dice HTML matches dice.css from lab 5 (same as showDie() in 07_dice.js)
-
 class Dice {
 
   constructor(numberOfDice = 5) {
@@ -10,22 +6,23 @@ class Dice {
     this.held = new Array(numberOfDice).fill(false); // true = player is keeping this die
   }
 
-  // returns a random number between 1 and 6 (inclusive)
-  roll() {
-    return Math.floor(Math.random() * 6) + 1;
-  }
+  async rollAll() {
+    const response = await fetch("/roll-dices");
 
-  // rolls every die that is not held, returns the new values
-  rollAll() {
-    for (let i = 0; i < this.numberOfDice; i++) {
+    if (!response.ok) {
+      throw new Error(`Server error (${response.status}`);
+    }
+
+    const data = await response.json();
+
+    for (let i = 0; i < this.numberOfDice; i++){
       if (!this.held[i]) {
-        this.values[i] = this.roll();
+        this.values[i] = data.dice[i];
       }
     }
     return this.getValues();
   }
 
-  // keep or un-keep one die
   toggleHold(index) {
     this.held[index] = !this.held[index];
   }
