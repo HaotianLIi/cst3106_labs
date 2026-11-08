@@ -36,7 +36,7 @@ function shakeDice(whenDone) {
   $rolling.promise().done(whenDone);
 }
 
-rollButton.addEventListener("click", async () => {
+$("#rollButton").on("click", async () => {
   try {
     await dice.rollAll();
     // new numbers are only shown after the animation completes
