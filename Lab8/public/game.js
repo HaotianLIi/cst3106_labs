@@ -1,4 +1,4 @@
-// app.js connects page to Dice module
+// game.js connects page to Dice module
 
 const dice = new Dice(5);
 
@@ -21,11 +21,29 @@ function showDice() {
   });
 }
 
+// held dice are skipped so they stay still
+function shakeDice(whenDone) {
+  const $rolling = $("#diceGroup .dice-container:not(.held) .dice");
+
+  for (let i = 0; i < 4; i++) {
+    $rolling
+      .animate({ left: "-=10px" }, 50)
+      .animate({ left: "+=20px" }, 50)
+      .animate({ left: "-=10px" }, 50);
+  }
+
+  // promise() waits for every die, so whenDone runs once instead of once per die
+  $rolling.promise().done(whenDone);
+}
+
 rollButton.addEventListener("click", async () => {
   try {
-    await dice.rollAll();          // gets the values from the server
-    showDice();
-    message.textContent = "Click dice to keep them, then roll again";
+    await dice.rollAll();
+    // new numbers are only shown after the animation completes
+    shakeDice(() => {
+      showDice();
+      message.textContent = "Click dice to keep them, then roll again";
+    });
   } catch (error) {
     console.error(error);
     message.textContent = "Could not get the dice from the server. Please try again.";
