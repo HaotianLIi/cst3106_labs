@@ -2,7 +2,7 @@ class Dice {
 
   constructor(numberOfDice = 5) {
     this.numberOfDice = numberOfDice;           // Yatzy uses 5 dice
-    this.values = new Array(numberOfDice).fill(1); // current face of each die
+    this.values = new Array(numberOfDice).fill(6) // current face of each die
     this.held = new Array(numberOfDice).fill(false); // true = player is keeping this die
   }
 
