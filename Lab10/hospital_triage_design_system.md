@@ -1,7 +1,7 @@
 # Hospital Triage App - Design System
 
 Author: Haotian Li (040961243)
-Team members: none, I worked alone
+Team members: Manzar
 Course: CST3106, Lab 10
 
 This document describes the design system for the Hospital Triage app: fonts, colors, components, layout and navigation, and how I keep them consistent. It is meant to guide the development of the app, so every value here (font, weight, hex code) is what the code should use.
@@ -73,7 +73,7 @@ The five attention levels come from the **Canadian Triage and Acuity Scale (CTAS
 |---|---|---|---|---|
 | 1 | Resuscitation | Immediately | `#3B202B` | `#FFACB8` |
 | 2 | Emergent | 15 min | `#3D252C` | `#FFACB6` |
-| 3 | Urgent | 30 min | `#392E23` | `#FFCA89` |
+| 3 | Urgent | 30 min | `#392E23` | `#FFCA89` |hospital_triage_design_system
 | 4 | Less urgent | 60 min | `#363322` | `#F5DE8E` |
 | 5 | Non-urgent | 120 min | `#21382D` | `#A3DDB2` |
 
